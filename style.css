@@ -30,6 +30,10 @@ li {
   padding: 50px;
   text-align: center;
 }
+/* 
+.timeline-main {
+  margin-top: 100px;
+} */
 
 /* Design */
 body {
@@ -40,6 +44,8 @@ body {
   background-color: rgba(255, 255, 255, 0.20);
 }
 
+
+/* Header */
 .timeline-header .timeline-title {
   font-size: 40px;
   font-weight: bold;
@@ -64,9 +70,23 @@ body {
   margin-left: auto;
 }
 
+/* Main */
+.timeline-main .timeline-list {
+  margin: 0 -20px;
+}
+
+.timeline-main .timeline-list .year {
+  margin: -100px 0;
+}
+
+.timeline-main .timeline-list .year:first-child {
+  margin-top: 0;
+}
+
 .timeline-main .timeline-list .year .card {
   background-color: white;
   padding: 30px;
+  margin: 20px;
   border-radius: 20px;
 }
 
@@ -83,8 +103,10 @@ body {
 
 .timeline-main .timeline-list .year .card .card-button {
   color: dodgerblue;
+  width: 115px;
+  text-align: center;
   border: 1px solid;
-  margin: 25px 215px 0 0;
+  margin-top: 25px;
   padding: 10px;
   border-radius: 5px;
 }
