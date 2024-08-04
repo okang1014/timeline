@@ -1,14 +1,18 @@
 /* CSS Reset */
-body {
+body, ol, p {
   margin: unset;
   padding: unset;
 }
 
-h1 {
+h1, h2 {
   margin: unset;
   padding: unset;
   font-size: unset;
   font-weight: unset;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* Typography */
@@ -37,7 +41,7 @@ body {
 }
 
 .timeline-header .timeline-title {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   color: white;
 }
@@ -52,6 +56,35 @@ body {
   border-radius: 10px;
 }
 
-.timeline-list {
-  box-shadow: inset 0 0 20px red;
+.timeline-main .timeline-list .year {
+  width: 50%;
+}
+
+.timeline-main .timeline-list .year:nth-child(even) {
+  margin-left: auto;
+}
+
+.timeline-main .timeline-list .year .card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.timeline-main .timeline-list .year .card .card-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: dodgerblue;
+  margin-bottom: 10px;
+}
+
+.timeline-main .timeline-list .year .card .card-text {
+  color: grey;
+}
+
+.timeline-main .timeline-list .year .card .card-button {
+  color: dodgerblue;
+  border: 1px solid;
+  margin: 25px 215px 0 0;
+  padding: 10px;
+  border-radius: 5px;
 }
