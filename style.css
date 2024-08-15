@@ -25,15 +25,10 @@ li {
   width: 800px;
   margin: 0 auto;
 }
-
 .timeline-header {
   padding: 50px;
   text-align: center;
 }
-/* 
-.timeline-main {
-  margin-top: 100px;
-} */
 
 /* Design */
 body {
@@ -109,4 +104,12 @@ body {
   margin-top: 25px;
   padding: 10px;
   border-radius: 5px;
+}
+.l_col:nth-child(even) {
+  margin-left: auto;
+}
+
+.timeline-container {
+  background-color: white;
+  padding: 40px;
 }
