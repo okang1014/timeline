@@ -113,6 +113,12 @@ body {
   background-color: white;
   padding: 40px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.l_col:nth-child(even) .timeline-container {
+  align-items: flex-start;
 }
 .timeline-year {
   box-shadow: inset 0 0 20px red;
@@ -127,6 +133,10 @@ body {
   color: #666;
   line-height: 1.4;
   margin-bottom: 20px;
+  text-align: right;
+}
+.l_col:nth-child(even) .timeline-text {
+  text-align: unset;
 }
 .button {
   box-shadow: inset 0 0 20px yellow;
