@@ -29,6 +29,16 @@ li {
   padding: 50px;
   text-align: center;
 }
+.l_row {
+  box-shadow: inset 0 0 20px white;
+  margin: 0 -30px;
+}
+.l_col {
+  box-shadow: inset 0 0 10px green;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
 
 /* Design */
 body {
@@ -57,56 +67,17 @@ body {
   border-radius: 10px;
 }
 
-.timeline-main .timeline-list .year {
-  width: 50%;
+.timeline-list {
+  box-shadow: inset 0 0 20px red;
 }
-
-.timeline-main .timeline-list .year:nth-child(even) {
-  margin-left: auto;
-}
-
-/* Main */
-.timeline-main .timeline-list {
-  margin: 0 -20px;
-}
-
-.timeline-main .timeline-list .year {
-  margin: -100px 0;
-}
-
-.timeline-main .timeline-list .year:first-child {
-  margin-top: 0;
-}
-
-.timeline-main .timeline-list .year .card {
-  background-color: white;
-  padding: 30px;
-  margin: 20px;
-  border-radius: 20px;
-}
-
-.timeline-main .timeline-list .year .card .card-title {
-  font-size: 25px;
-  font-weight: bold;
-  color: dodgerblue;
-  margin-bottom: 10px;
-}
-
-.timeline-main .timeline-list .year .card .card-text {
-  color: grey;
-}
-
-.timeline-main .timeline-list .year .card .card-button {
-  color: dodgerblue;
-  width: 115px;
-  text-align: center;
-  border: 1px solid;
-  margin-top: 25px;
-  padding: 10px;
-  border-radius: 5px;
-}
-.l_col:nth-child(even) {
-  margin-left: auto;
+.timeline-list::before {
+  content: ' ';
+  background-color: skyblue;
+  position: absolute;
+  inset: 0;
+  width: 10px;
+  margin: -10px auto;
+  border-radius: 10px;
 }
 
 .timeline-container {
@@ -121,14 +92,31 @@ body {
   align-items: flex-start;
 }
 .timeline-year {
-  box-shadow: inset 0 0 20px red;
   font-size: 24px;
   font-weight: bold;
   color: dodgerblue;
   margin-bottom: 20px;
+  position: relative;
+}
+.timeline-year::before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: -60px;
+}
+.l_col:nth-child(even) .timeline-year::before {
+  right: auto;
+  left: -60px;
+  border-color: transparent white transparent transparent;
 }
 .timeline-text {
-  box-shadow: inset 0 0 20px blue;
   font-size: 14px;
   color: #666;
   line-height: 1.4;
@@ -139,7 +127,6 @@ body {
   text-align: unset;
 }
 .button {
-  box-shadow: inset 0 0 20px yellow;
   display: block;
   max-width: fit-content;
   height: 40px;
